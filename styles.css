@@ -41,18 +41,24 @@ header {
 main {
   font-size: 1.1rem;
   line-height: 1.5rem;
+  margin-inline: auto;
+  max-width: 1200px;
   padding: 0 2rem;
 }
 
 article {
   align-items: center;
+  border-radius: 6px;
   background: #fff;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
   column-gap: 2rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
-  padding: 0.25rem 1rem 1rem;
+  margin-block: 2rem;
+  padding: 1rem 0.5rem 2.5rem;
+}
+
+article:nth-child(odd) {
+  background: #f9f9f9;
 }
 
 article img {
@@ -65,4 +71,11 @@ footer {
   margin-top: 1rem;
   padding: 0.5rem 0 1rem 0;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    flex-flow: column;
+  }
+  
 }
